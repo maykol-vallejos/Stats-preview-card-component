@@ -1,0 +1,231 @@
+:root {
+
+    --Very-dark-blue-mainbackground: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue-cardBackground: hsl(244, 38%, 16%);
+    --Soft-violet-accent: hsl(277, 64%, 61%);
+
+    --White-mainHeading-Stats: hsl(0, 0%, 100%);
+    --Slightly-transparent-white-mainParagraph: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white-statHeadings: hsla(0, 0%, 100%, 0.6);
+
+    --gradient-soft-violet-accent: hsla(277, 64%, 61%, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5rem;
+    margin: 0;
+
+    /* font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Deca', sans-serif; */
+
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+
+    background-color: var(--Very-dark-blue-mainbackground);
+}
+
+.container {
+    width: 110rem;
+    /* justify-content: space-between; */
+    background-color: var(--Very-dark-blue-mainbackground);
+    padding: 2rem;
+    border-radius: 0.8rem;
+}
+
+.card {
+    width: 100%;
+    background-color: var(--Dark-desaturated-blue-cardBackground);
+    border-radius: 0.8rem;
+
+    display: flex;
+    overflow: hidden;
+}
+
+.information {
+    width: 50%;
+    background-color: var(--Dark-desaturated-blue-cardBackground);
+}
+
+.margin-information{
+    margin: 6rem;
+    /* background-color: black; */
+    
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    /* align-items: left; */
+    gap: 2.5rem;
+}
+
+.margin-information h1{
+    font-weight: 700;
+    font-size: 3.5rem;
+    font-family: 'Inter', sans-serif;
+    color: var(--White-mainHeading-Stats);
+}
+
+.margin-information h1 span{
+    color: var(--Soft-violet-accent);
+}
+
+.description-information{
+    width:90%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    color: var(--Slightly-transparent-white-mainParagraph);
+
+    margin-bottom: 4rem; 
+}
+
+.plan-box{
+    display: flex;
+    /* background-color: aqua; */
+    justify-content: space-between;
+    width: 85%;
+}
+
+.plan-box div{
+    display: block;
+
+    justify-content: left;
+    align-items: center;
+
+    /* text-transform: uppercase; */
+    font-family: 'Lexend Deca', sans-serif; 
+}
+
+.plan-box div h2{
+    margin-bottom: 1rem;
+    color: var(--White-mainHeading-Stats);
+    /* text-transform: uppercase;
+    font-family: 'Lexend Deca', sans-serif;  */
+    font-size: 2.3rem;
+}
+
+.plan-box div p{
+    margin-bottom: 1rem;
+    /* text-transform: uppercase;
+    font-family: 'Lexend Deca', sans-serif;  */
+    color: var(--Slightly-transparent-white-statHeadings);
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.image-header {
+    width: 50%;
+    line-height: 0;
+    /* border-radius: 0.8rem; */
+
+    position: relative;
+}
+
+
+.image-overlay {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--gradient-soft-violet-accent);
+    /* border-radius: 0.8rem; */
+    overflow: hidden;
+}
+
+
+
+
+@media only screen and (max-width:37.5rem) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .container {
+        align-items: flex-start;
+        width: 30rem;
+        /* background-color: aqua; */
+
+    }
+
+    .card {
+        flex-direction: column-reverse;
+        border-radius: 0.8rem;
+
+    }
+    
+    .image-header {
+        width: 100%;
+        height: 20rem;
+    }
+
+    .image-information {
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+    }
+
+    .information{
+        width: 100%;
+    }
+
+    .margin-information{
+        margin:2rem;
+        /* align-items: center; */
+    }
+
+    .margin-information h1{
+        text-align: center;
+        font-size: 2.3rem; 
+    }
+
+    .description-information{
+        width: 100%;
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .plan-box{
+        /* width: 100%; */
+        flex-direction: column;
+        place-items:center;  
+    }
+
+    .plan-box div{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .plan-box div h2{
+        font-size: 1.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .plan-box div p{
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+}
